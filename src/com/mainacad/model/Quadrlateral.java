@@ -16,4 +16,10 @@ public class Quadrlateral extends Square {
         return base * getSide();
     }
 
+    public Quadrlateral(double base) {
+        this.base = base;
+    }
+
+    public Quadrlateral() {
+    }
 }
