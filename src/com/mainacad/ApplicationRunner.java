@@ -21,6 +21,13 @@ public class ApplicationRunner {
       list.add(triangle.getArea());
       double maxShape = Collections.max(list);
 
+      if (maxShape >= 100){
+        System.out.println("Max area is bigger than 100 or equal it " +
+                maxShape);
+      } else {
+        System.out.println("Max area is less than 100 ;( ");
+      }
+
       System.out.println("Figure with the biggest area has area: " + maxShape);
     }
 }
