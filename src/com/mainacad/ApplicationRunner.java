@@ -1,6 +1,7 @@
 package com.mainacad;
 
 import com.mainacad.model.*;
+import java.util.*;
 
 public class ApplicationRunner {
 
@@ -10,23 +11,16 @@ public class ApplicationRunner {
 
       Square square = new Square(15);
 
-       Triangle triangle = new Triangle(10,12);
+      Triangle triangle = new Triangle(10,12);
 
-      Shape maxShape;
 
-      if (circle.getArea() > square.getArea()){
-          maxShape = circle;
-      }
-      else if (circle.getArea() < square.getArea()){
-          maxShape = square;
-      }
-      else {
-          maxShape = square;
-      }
-      if (maxShape.getArea() < triangle.getArea()){
-          maxShape = triangle;
-      }
-        System.out.println("Max shape has area " + maxShape.getArea());
+      ArrayList<Double> list = new ArrayList<>();
 
+      list.add(circle.getArea());
+      list.add(square.getArea());
+      list.add(triangle.getArea());
+      double maxShape = Collections.max(list);
+
+      System.out.println("Figure with the biggest area has area: " + maxShape);
     }
 }

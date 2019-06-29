@@ -3,6 +3,15 @@ package com.mainacad.model;
 public class Square extends AbstractShape{
 
     private double side;
+    private double penis;
+
+    public double getPenis() {
+        return penis;
+    }
+
+    public void setPenis(double penis) {
+        this.penis = penis;
+    }
 
     public double getSide() {
         return side;
